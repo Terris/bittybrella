@@ -10,18 +10,16 @@
     <%= javascript_include_tag "site" %>
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="logo"><a href="/"><%=image_tag "bitty_brella_logo_white.png", alt: "Bitty Brella" %></a>  </h1>
-        <nav class="nav-primary">
-          <%=link_to "THE COVER", "/" %>
-          <%=link_to "FIND US", "/location" %>
-          <%=link_to "WEDDINGS & EVENTS", "/events" %>
-          <%=link_to "ABOUT", "/about" %>
-          <%=link_to "CONTACT", "/contact" %>
-        </nav>
-      </header>
-      <%= yield %>
+    <header class="header">
+      <nav class="nav-primary">
+        <%=link_to "Bitty Brella", "/", class: "nav-logo" %>
+        <%=link_to "Locations", "/location" %>
+        <%=link_to "Wedding & Events", "/events" %>
+        <%=link_to "About", "/about" %>
+        <%=link_to "Contact", "/contact" %>
+      </nav>
+    </header>
+    <%= yield %>
     </div>
   </body>
 </html>
