@@ -3,14 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Middleman" %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= "#{current_page.data.title} | Bitty Brella" || "Bitty Brella" %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Grenze:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
   </head>
   <body>
-    <%= yield %>
+    <div class="wrapper">
+      <header>
+        <h1 class="logo"><a href="/"><%=image_tag "bitty_brella_logo_white.png", alt: "Bitty Brella" %></a>  </h1>
+        <nav class="nav-primary">
+          <%=link_to "THE COVER", "/" %>
+          <%=link_to "FIND US", "/location" %>
+          <%=link_to "WEDDINGS & EVENTS", "/events" %>
+          <%=link_to "ABOUT", "/about" %>
+          <%=link_to "CONTACT", "/contact" %>
+        </nav>
+      </header>
+      <%= yield %>
+    </div>
   </body>
 </html>

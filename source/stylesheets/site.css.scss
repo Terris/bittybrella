@@ -1,24 +1,112 @@
+/* Reset
+------------------------------------ */
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+html,
+input,
+textarea {
+  -webkit-font-smoothing: antialiased;
+}
 body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+  padding: 40px;
+  background: #222 url("/images/chalkboard.jpg") top left repeat;
+  color: #fff;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  font-family: "Grenze", serif;
+  font-size: 200%;
+  font-weight: 300;
+  line-height: 1.25;
+}
+img {
+  width: 100%;
+}
+svg {
+  max-height: 100%;
 }
 
-a {
-  color: rgba(#000, 0.7);
+/* Base
+------------------------------------ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  padding: 1rem 20px;
+  line-height: 1.25;
+}
 
-  &:focus,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
+/* Links
+------------------------------------ */
+a {
+  text-decoration: none;
+  color: #cf3b3b;
+  transition: color 0.2s ease;
   &:hover {
-    color: rgba(#000, 0.6);
+    color: #ea8b8b;
   }
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+/* Layout
+------------------------------------ */
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.logo {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.nav-primary {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  a {
+    display: block;
+    padding: 10px 40px 12px 40px;
+    color: #fff;
+    transition: background 0.2s ease;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    &:hover {
+      background: #cf3b3b;
+    }
+  }
+}
+
+/* Section Blocks
+------------------------------------ */
+.section-blocks-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.section-block {
+  padding: 1rem 20px;
+}
+.section-block-poem {
+  border-right: 1px solid #fff;
+  .section-block-title {
+    font-weight: 700;
+  }
 }
